@@ -24,3 +24,4 @@ Route::put('/matelas/{id}', [MatelasController::class, 'update']);
 Route::get('/matelas/create', [MatelasController::class, 'create']);
 Route::post('/matelas', [MatelasController::class, 'store']);
 Route::delete('/matelas/{id}', [MatelasController::class, 'destroy']);
+Route::post('/matelas', 'MatelasController@store')->name('matelas.store');

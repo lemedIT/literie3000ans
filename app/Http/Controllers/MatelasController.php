@@ -37,10 +37,20 @@ class MatelasController extends Controller
 
     // ajouter un matela
     public function store(Request $request)
-    {
-        Matelas::create($request->all());
-        return redirect('/')->with('success', 'Matelas ajouté avec succès');
-    }
+{
+    // Validation des données du formulaire
+    $validatedData = $request->validate([
+        'marque' => 'required|string',
+        'taille' => 'required|string',
+        'prix' => 'required|numeric',
+    ]);
+
+    // Création d'un nouveau matelas
+    Matelas::create($validatedData);
+
+    // Redirection vers la page d'accueil ou une autre page appropriée
+    return redirect()->route('matelas.index')->with('success', 'Matelas ajouté avec succès');
+}
 
     // supprimer un matelas
     public function destroy($id)

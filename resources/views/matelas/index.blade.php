@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
+@include('navbar.navbar')
 @section('content')
-    <h1>Liste des Matelas</h1>
+    <h1>😴Literie3000</h1>
 
     @foreach($matelas as $m)
         <div class="card">
@@ -11,7 +11,7 @@
                 <p class="card-text">Prix: {{ $m->prix }} €</p>
                 <a href="{{ url("/matelas/$m->id/edit") }}" class="btn btn-primary">Modifier</a>
                 <form action="{{ url("/matelas/$m->id") }}" method="post" class="d-inline">
-                    @csrf
+                    @csrf <!-- sécurité pour empecher les injections par EX -->
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Supprimer</button>
                 </form>
@@ -19,3 +19,4 @@
         </div>
     @endforeach
 @endsection
+
