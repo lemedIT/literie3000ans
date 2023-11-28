@@ -2,7 +2,7 @@
 @include('navbar.navbar')
 @section('content')
     <h1>😴Literie3000</h1>
-    <a href="{{ url("/matelas/create") }}" class="btn btn-primary">Ajouter</a>
+    <center><a href="{{ url("/matelas/create") }}" class="btn btn-primary">Ajouter un matelas</a></center>
 
     @if($matelas->count() > 0)
         @foreach($matelas as $m)
@@ -14,7 +14,7 @@
                     <a href="{{ url("/matelas/$m->id/edit") }}" class="btn btn-primary">Modifier</a>
                     <form action="{{ url("/matelas/$m->id") }}" method="post" class="d-inline">
                         @csrf <!-- sécurité pour empecher les injections par EX -->
-                        @method('DELETE')
+                        @method('DELETE') <br>
                         <button type="submit" class="btn btn-danger">Supprimer</button>
                     </form>
                 </div>
@@ -23,9 +23,4 @@
     @else
         <p>Aucun matelas trouvé.</p>
     @endif
-@endsection
-
-@section('styles')
-    @parent
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 @endsection
