@@ -1,0 +1,80 @@
+/* styles.css */
+
+/* Style de la carte matelas */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #555;
+}
+
+/* Boutons sur les cartes */
+.btn-primary {
+    background-color: #3490dc;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #e3342f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Formulaire d'ajout/modification */
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #3490dc;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* En-tête de la page */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Ajouter un peu de marge à certains éléments */
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+/* Ajouter un peu d'espacement à certains boutons */
+.d-inline {
+    margin-right: 10px;
+}
