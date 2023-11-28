@@ -32,7 +32,7 @@ class MatelasController extends Controller
     // afficher formulaire d'ajout matelas
     public function create()
     {
-        return view('matelas.create');
+        return view('matelas/create');
     }
 
     // ajouter un matela
@@ -44,6 +44,8 @@ class MatelasController extends Controller
         'taille' => 'required|string',
         'prix' => 'required|numeric',
     ]);
+
+
 
     // Création d'un nouveau matelas
     Matelas::create($validatedData);

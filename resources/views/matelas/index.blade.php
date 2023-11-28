@@ -9,6 +9,7 @@
                 <h5 class="card-title">{{ $m->marque }}</h5>
                 <p class="card-text">Taille: {{ $m->taille }}</p>
                 <p class="card-text">Prix: {{ $m->prix }} €</p>
+                <a href="{{ url("/matelas/create") }}" class="btn btn-primary">Ajouter</a>
                 <a href="{{ url("/matelas/$m->id/edit") }}" class="btn btn-primary">Modifier</a>
                 <form action="{{ url("/matelas/$m->id") }}" method="post" class="d-inline">
                     @csrf <!-- sécurité pour empecher les injections par EX -->
