@@ -17,6 +17,11 @@
             <label for="prix" class="form-label">Prix</label>
             <input type="number" class="form-control" id="prix" name="prix" required>
         </div>
+        {{-- new features aie aie aie
+        <div class="mb-3">
+            <label for="image_url" class="form-label">URL de l'image</label>
+            <input type="text" class="form-control" id="image_url" name="image_url">
+        </div> --}}
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
 @endsection

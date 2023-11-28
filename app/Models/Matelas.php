@@ -9,5 +9,5 @@ class Matelas extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['marque', 'taille', 'prix'];
+    protected $fillable = ['marque', 'taille', 'prix', 'image_url'];
 }
