@@ -26,7 +26,8 @@ class MatelasController extends Controller
     {
         $matelas = Matelas::find($id);
         $matelas->update($request->all());
-        return redirect('/')->with('success', 'Matelas mis à jour avec succès');
+        // return redirect('/')->with('success', 'Matelas mis à jour avec succès'); ancienne
+        return redirect()->route('matelas.index')->with('success', 'Matelas mis à jour avec succès');
     }
 
     // afficher formulaire d'ajout matelas
@@ -68,6 +69,7 @@ class MatelasController extends Controller
     {
         $matelas = Matelas::find($id);
         $matelas->delete();
-        return redirect('/')->with('success', 'Matelas supprimé avec succès');
+        // return redirect('/')->with('success', 'Matelas supprimé avec succès'); ancienne
+        return redirect()->route('matelas.index')->with('success', 'Matelas supprimé avec succès');
     }
 }
