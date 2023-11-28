@@ -45,10 +45,19 @@ class MatelasController extends Controller
         'prix' => 'required|numeric',
     ]);
 
+    // //crashtest bouton ajouter
+    // $matelas = new Matelas();
+    // $matelas->marque = $request->marque;
+    // $matelas->taille = $request->taille;
+    // $matelas->prix = $request->prix;
+    // $matelas->save();
 
+    // return redirect('/matelas');
+    // }
 
     // Création d'un nouveau matelas
     Matelas::create($validatedData);
+
 
     // Redirection vers la page d'accueil ou une autre page appropriée
     return redirect()->route('matelas.index')->with('success', 'Matelas ajouté avec succès');

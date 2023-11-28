@@ -18,10 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [MatelasController::class, 'index']);
+// Route::get('/', [MatelasController::class, 'index']);
+Route::get('/matelas', [MatelasController::class, 'index'])->name('matelas.index');
 Route::get('/matelas/{id}/edit', [MatelasController::class, 'edit']);
 Route::put('/matelas/{id}', [MatelasController::class, 'update']);
 Route::get('/matelas/create', [MatelasController::class, 'create']);
 Route::post('/matelas', [MatelasController::class, 'store']);
 Route::delete('/matelas/{id}', [MatelasController::class, 'destroy']);
-Route::post('/matelas', 'MatelasController@store')->name('matelas.store');
+
+
+// Route::post('/matelas', 'MatelasController@store')->name('matelas.store');
+
+
